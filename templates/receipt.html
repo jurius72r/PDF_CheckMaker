@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Счет {{ invoice_id }}</title>
+  <style>
+    @page { size: A4; margin: 20mm; }
+    body {
+      color: #222;
+      font-family: "DejaVu Sans", Roboto, Arial, sans-serif;
+      font-size: 12pt;
+    }
+    h1 { font-size: 20pt; }
+    .row { margin: 12px 0; }
+    .label { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Счет № {{ invoice_id }}</h1>
+  <div class="row"><span class="label">Покупатель:</span> {{ customer }}</div>
+  <div class="row"><span class="label">Услуга:</span> {{ description }}</div>
+  <div class="row"><span class="label">Сумма:</span> {{ amount }} {{ currency }}</div>
+</body>
+</html>
